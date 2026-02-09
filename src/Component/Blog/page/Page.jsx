@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Header from './Header'
 import { useParams } from 'react-router-dom'
-import Body from './body'
+import Body from './Body'
 import apiData from '../../../ComApi/Api.json'
 
 export default function Page() {
