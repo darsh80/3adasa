@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+
+/* ================== Components ================== */
+@layer components {
+
+  /* زر رئيسي */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium text-black bg-orange-500 transition;
+  }
+
+  .btn-primary:hover {
+    @apply bg-orange-400;
+  }
+
+  /* زر ثانوي */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium text-white border border-neutral-700 hover:bg-neutral-800 transition;
+  }
+
+  /* نص Gradient */
+  .gradient-text {
+    @apply bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent;
+  }
+
+  /* أيقونات */
+  .icon-btn {
+    @apply p-3 text-neutral-500 rounded-xl transition-all duration-300 border border-transparent hover:text-orange-500 hover:bg-[#161616] hover:border-[#262626];
+  }
+
+  /* Glass Card */
+  .glass-card {
+    @apply rounded-xl text-center bg-white/5 backdrop-blur border border-white/10;
+  }
+}
+
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #fb923c, #facc15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+  /* orange-500 */
+}
+
+
+.section-label:before {
+    content: "";
+    height: calc(var(--spacing) * 1.5);
+    width: calc(var(--spacing) * 1.5);
+    background: #f97316;
+    border-radius: 3.40282e38px;
+    animation: 2s infinite pulse;
+}
